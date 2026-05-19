@@ -1,10 +1,11 @@
 import pandas as pd
 
 data = {
-    "Name": ["Aman", "Riya", "Rahul", "Neha", "Ankit"],
-    "Math": [78, 92, 45, 60, 30],
-    "Science": [85, 88, 50, 65, 40],
-    "English": [80, 95, 40, 70, 35]
+    "Name": ["ankit", "Riya", "shivani", "shaloni", 'amit', 'avinash'],
+    "Math": [93, 22, 34, 60, 33, 78],
+    "Science": [66, 78, 88, 65, 78, 68],
+    "English": [91, 52, 73, 70, 23, 80],
+    'Hindi': [67, 78, 89, 23, 34, 45]
 }
 
 df = pd.DataFrame(data)
@@ -24,10 +25,10 @@ print("Shape:", df.shape)
 
 # Subject Average
 print("Subject Average:\n",
-      df[["Math", "Science", "English"]].mean())
+      df[["Math", "Science", "English", 'Hindi']].mean())
 
 # Student Average
-avg = df[["Math", "Science", "English"]].mean(axis=1)
+avg = df[["Math", "Science", "English", 'Hindi']].mean(axis=1)
 print("Student Average:\n", avg)
 
 # Topper
@@ -37,7 +38,7 @@ print("Topper index:", topper)
 print("Topper marks:\n", df.loc[topper])
 
 # Fail students
-fail = (df[["Math", "Science", "English"]] < 50).any(axis=1)
+fail = (df[["Math", "Science", "English", 'Hindi']] < 50).any(axis=1)
 
 print("Fail students:\n", df[fail])
 
@@ -47,7 +48,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("C:/Users/PC/Desktop/student.csv")
 
 # Subject averages
-subject_avg = df[["Math", "Science", "English"]].mean()
+subject_avg = df[["Math", "Science", "English", 'Hindi']].mean()
 
 # Graph
 subject_avg.plot(kind='bar')
@@ -57,7 +58,7 @@ plt.xlabel("Subjects")
 plt.ylabel("Average Marks")
 
 plt.show()
-avg = df[["Math", "Science", "English"]].mean(axis=1)
+avg = df[["Math", "Science", "English", 'Hindi']].mean(axis=1)
 
 plt.bar(df["Name"], avg)
 
