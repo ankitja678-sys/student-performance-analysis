@@ -1,24 +1,46 @@
-# Student Performance Analysis
 
-A Python project for analyzing student marks using Pandas and Matplotlib.
+---
 
-## Features
-- CSV handling
-- Subject average analysis
+### Student Performance Analysis — `README.md`
+
+```markdown
+# 🎓 Student Performance Analysis
+
+A Python data analysis project that analyzes student marks using Pandas and Matplotlib.
+
+## 📌 Project Overview
+
+This project analyzes student performance data to extract useful insights from examination marks.
+
+It demonstrates practical use of Python for data analysis, CSV processing, statistical calculations, and visualization.
+
+## ✨ Features
+
+- CSV data handling
+- Student marks analysis
+- Subject average calculation
 - Topper detection
 - Fail student analysis
 - Data visualization
+- Beginner-friendly implementation
 
-## Technologies Used
+## 🛠️ Technologies Used
+
 - Python
 - Pandas
 - Matplotlib
 
-## Run Project
+## 📊 Analysis Workflow
 
-```bash
-python main.py
-```
-
-## Author
-Ankit Jatav
+```text
+CSV Dataset
+    ↓
+Load Data with Pandas
+    ↓
+Clean & Analyze Data
+    ↓
+Calculate Subject Averages
+    ↓
+Identify Topper & Fail Students
+    ↓
+Visualize Results
